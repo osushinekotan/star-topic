@@ -15,6 +15,8 @@ anyio==4.3.0
     # via watchfiles
 beautifulsoup4==4.12.3
     # via backend
+bertopic==0.16.0
+    # via backend
 certifi==2024.2.2
     # via requests
 cfgv==3.4.0
@@ -23,16 +25,30 @@ charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via uvicorn
+cython==0.29.37
+    # via hdbscan
 distlib==0.3.8
     # via virtualenv
 fastapi==0.110.1
     # via backend
 filelock==3.13.1
+    # via huggingface-hub
+    # via torch
+    # via transformers
     # via virtualenv
+fsspec==2024.3.1
+    # via huggingface-hub
+    # via torch
 h11==0.14.0
     # via uvicorn
+hdbscan==0.8.33
+    # via bertopic
 httptools==0.6.1
     # via uvicorn
+huggingface-hub==0.22.2
+    # via sentence-transformers
+    # via tokenizers
+    # via transformers
 identify==2.5.35
     # via pre-commit
 idna==3.7
@@ -40,14 +56,51 @@ idna==3.7
     # via requests
 iniconfig==2.0.0
     # via pytest
+jinja2==3.1.3
+    # via torch
+joblib==1.4.0
+    # via hdbscan
+    # via pynndescent
+    # via scikit-learn
+llvmlite==0.42.0
+    # via numba
+    # via pynndescent
 markdown==3.6
     # via backend
+markupsafe==2.1.5
+    # via jinja2
+mpmath==1.3.0
+    # via sympy
+networkx==3.3
+    # via torch
 nodeenv==1.8.0
     # via pre-commit
+numba==0.59.1
+    # via pynndescent
+    # via umap-learn
+numpy==1.26.4
+    # via bertopic
+    # via hdbscan
+    # via numba
+    # via pandas
+    # via scikit-learn
+    # via scipy
+    # via sentence-transformers
+    # via transformers
+    # via umap-learn
 packaging==24.0
+    # via huggingface-hub
+    # via plotly
     # via pytest
+    # via transformers
+pandas==2.2.2
+    # via bertopic
+pillow==10.3.0
+    # via sentence-transformers
 platformdirs==4.2.0
     # via virtualenv
+plotly==5.20.0
+    # via bertopic
 pluggy==1.4.0
     # via pytest
 pre-commit==3.6.2
@@ -56,27 +109,81 @@ pydantic==2.7.0
     # via fastapi
 pydantic-core==2.18.1
     # via pydantic
+pynndescent==0.5.12
+    # via umap-learn
 pytest==8.1.1
     # via backend
+python-dateutil==2.9.0.post0
+    # via pandas
 python-dotenv==1.0.1
     # via uvicorn
+pytz==2024.1
+    # via pandas
 pyyaml==6.0.1
+    # via huggingface-hub
     # via pre-commit
+    # via transformers
     # via uvicorn
+regex==2023.12.25
+    # via transformers
 requests==2.31.0
     # via backend
+    # via huggingface-hub
+    # via transformers
+safetensors==0.4.2
+    # via transformers
+scikit-learn==1.4.2
+    # via bertopic
+    # via hdbscan
+    # via pynndescent
+    # via sentence-transformers
+    # via umap-learn
+scipy==1.13.0
+    # via hdbscan
+    # via pynndescent
+    # via scikit-learn
+    # via sentence-transformers
+    # via umap-learn
+sentence-transformers==2.6.1
+    # via bertopic
 setuptools==69.1.1
     # via nodeenv
+six==1.16.0
+    # via python-dateutil
 sniffio==1.3.1
     # via anyio
 soupsieve==2.5
     # via beautifulsoup4
 starlette==0.37.2
     # via fastapi
+sympy==1.12
+    # via torch
+tenacity==8.2.3
+    # via plotly
+threadpoolctl==3.4.0
+    # via scikit-learn
+tokenizers==0.15.2
+    # via transformers
+torch==2.2.2
+    # via sentence-transformers
+tqdm==4.66.2
+    # via bertopic
+    # via huggingface-hub
+    # via sentence-transformers
+    # via transformers
+    # via umap-learn
+transformers==4.39.3
+    # via sentence-transformers
 typing-extensions==4.11.0
     # via fastapi
+    # via huggingface-hub
     # via pydantic
     # via pydantic-core
+    # via torch
+tzdata==2024.1
+    # via pandas
+umap-learn==0.5.6
+    # via bertopic
 urllib3==2.2.1
     # via requests
 uvicorn==0.29.0
