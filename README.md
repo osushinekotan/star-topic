@@ -1,2 +1,2 @@
-# star-topic
-your stars (github) visualization
+# ster-topic
+your sters (github) visualization
