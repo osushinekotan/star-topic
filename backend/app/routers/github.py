@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Query
 
-from ..dependencies import fetch_starred_repos
+from ..services.github_service import fetch_starred_repos
 
 router = APIRouter()
 
